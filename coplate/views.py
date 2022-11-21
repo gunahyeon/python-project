@@ -1,3 +1,7 @@
+import requests
+from django.http import JsonResponse
+import jwt
+from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import redirect, render, get_object_or_404, redirect
 from django.urls import reverse
 from django.views.generic import (
@@ -17,7 +21,6 @@ from allauth.account.views import PasswordChangeView
 from .mixins import LoginAndVerificationRequiredMixin, LoginAndOwnershipRequiredMixin
 from .models import Review, User, Comment, Like
 from .forms import ReviewForm, ProfileForm, CommentForm
-
 
 class IndexView(View):
     def get(self, request, *args, **kwargs):

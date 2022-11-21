@@ -25,6 +25,11 @@ class User(AbstractUser):
         blank=True,
         related_name='followers'
     )
+
+    kakao_id = models.CharField(
+        max_length=50,
+        null = True
+    )
     # 역관계 이름 리네임 : realated_name user_set -> follwers
     # sysmmetrical : ex)친구를 맺으면 너랑나랑은 친구, 하지만 팔로우는 비대칭 관계로 너랑나랑팔로우는 아니기 때문ㅇ
     # symmetrical=False
