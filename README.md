@@ -3,7 +3,7 @@
 # 개발환경
 * Python 3.7.13
 * Django 2.2
-* 데이터베이스: Sqlite 3 -> PostgreSQL(CLI환경)
+* PostgreSQL(CLI환경)
 
 # 기술스택
 * django-allauth
